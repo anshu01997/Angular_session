@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src = "angular.min.js"></script>
+    <style> 
+    .size{
+        width:100px;
+        height:100px;
+        </style>
+     </head>
+     <body ng-app>
+     <select >
+     <option>Select Sort</option>
+     <option> price</option>
+     <option>name</option>
+     </select>
+     <!--TO SEARCH-->
+     <input type="text" ng-model="search" name="Angular_js" ( can write search.price to just search price wise) placeholder="type price here">
+         <ul ng-init='products=  json data     '>
+             <li ng-repeat="product in products.mobiles|filter:search|orderBy:sort"></li>  //filter out your searchm
+             <img ng-src="{{product.url}}">
+             {{product.id}} {{product.name|uppercase}} {{product.price|currency:'type html code of rupees'}} 
+             
+         </ul>
+     </body>

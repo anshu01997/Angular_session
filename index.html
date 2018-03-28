@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src = "angular.min.js"></script>
+    <style>
+    .red{
+        color:red;
+    }
+    .blue{
+        color:blueviolet;
+    }
+        </style>
+
+</head>
+<body ng-app>
+    <!-- tr*2-->
+    <!--<table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <p></p>
+    <p></p>-->
+    <h1>first angular project ----MVVM</h1>
+    
+    <input type="checkbox" ng-model="tick"> Tick is {{tick}}
+    <div ng-show="tick">    <!--show when the tick is true--> 
+    <!--View to Model-->
+    <input ng-init ="price=0" ng-model ="price" type="text" placeholder="Type Price Here">    <!--  data binding(view is bind with our data-->
+    <br>Price is {{price}}  
+    <br>  <!-- outputtinng the value-->   <!--  model to view-->
+    <input ng-init ="qt=0" ng-model ="qt" type="text" placeholder="Type Quantity Here">
+    <br>Quantity is {{qt}}
+    <br>
+    <br>
+    <p ng-class="{'red':price*qt<2000,'blue':price*qt>=2000}">Amount is {{price*qt}}</p>
+    </div>
+</body>
+</html>
